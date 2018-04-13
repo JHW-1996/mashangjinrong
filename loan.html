@@ -1,0 +1,155 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+	</head>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.mui-bar{
+			background-color: #5b8dfe;	
+		}
+		.mui-title{
+			color: white;
+		}
+		.zhuti{
+			width: 95%;
+			height: 20rem;
+			margin-left: 2.5%;
+		}
+		.zhuti>ul>li{
+			width: 100%;
+			height: 4.1rem;
+			list-style: none;
+			margin-top: 0.5rem;
+			border-radius:15px;
+		}
+		.zhuti>ul>li:nth-of-type(1){
+			background-color: #727bfe;
+		}
+		.mui-sd{
+			width: 15%;
+			height: 55%;
+			float: left;
+			border-radius: 50%;
+			margin-left: 5%;
+			margin-top: 7%;
+		}
+		.mui-sd img{
+			width: 100%;
+			height: 100%;
+		}
+		.zhuti>ul>li:nth-of-type(2){
+			background-color: #21bf82;
+		}
+		.zhuti>ul>li:nth-of-type(3){
+			background-color: #fe854e;
+		}
+		.zhuti>ul>li:nth-of-type(4){
+			background-color: #d900b6;
+		}
+		.zhuti>ul>li:nth-of-type(5){
+			background-color: #fd3051;
+		}
+		.zhuti>ul>li>p{
+			color: white;
+		}
+		.mui-sd-wd{
+			width: 22%;
+			float: left;
+			margin-left: 5%;
+			margin-top: 7%;
+		}
+		.mui-sd-yuan{
+			width: 40%;
+			float: left;
+			margin-left: 8%;
+			margin-top: 7%;
+			font-size: 0.8rem;
+		}
+		.mui-sd-ty{
+			width: 60%;
+			float: left;
+			margin-left: 5%;
+		}
+	</style>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		    <h1 class="mui-title">贷款大全</h1>
+		</header>
+		<div class="mui-content">
+		    <div class="zhuti">
+		    	<ul>
+		    		<li class="aa" title="loan-a.html">
+		    			<div class="mui-sd"><img src="img/images/sd_03.png"></div>
+		    			<p class="mui-sd-wd">闪电微额贷</p>
+		    			<p class="mui-sd-yuan">2000元以下</p>
+		    			<p class="mui-sd-ty">有手机接受验证码就能贷款</p>
+		    		</li>
+		    		<li title="loan-b.html">
+		    			<div class="mui-sd"><img src="img/images/ww_03.png"></div>
+		    			<p class="mui-sd-wd">热门现金贷</p>
+		    			<p class="mui-sd-yuan">2000~2万</p>
+		    			<p class="mui-sd-ty">有手机接受验证码就能贷款</p>
+		    		</li>
+		    		<li title="loan-c.html">
+		    		<div class="mui-sd"><img src="img/images/ww_06.png"></div>
+		    		<p class="mui-sd-wd">热门现金贷</p>
+		    			<p class="mui-sd-yuan">2000~2万</p>
+		    			<p class="mui-sd-ty">有手机接受验证码就能贷款</p>
+		    		</li>
+		    		<li title="loan-d.html">
+		    			<div class="mui-sd"><img src="img/images/ww_08.png"></div>
+		    			<p class="mui-sd-wd">闪电微额贷</p>
+		    			<p class="mui-sd-yuan">2000元以下</p>
+		    			<p class="mui-sd-ty">有手机接受验证码就能贷款</p>
+		    		</li>
+		    		<li title="loan-e.html">
+		    			<div class="mui-sd"><img src="img/images/ww_10.png"></div>
+		    			<p class="mui-sd-wd">闪电微额贷</p>
+		    			<p class="mui-sd-yuan">2000元以下</p>
+		    			<p class="mui-sd-ty">有手机接受验证码就能贷款</p>
+		    		</li>
+		    	</ul>
+		    </div>
+
+		</div>
+		
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			/**********js写法**********/
+			onresize = function() {
+				document.getElementsByTagName('html')[0].style.fontSize = document.documentElement.clientWidth / 16 + 'px';
+			}
+			document.getElementsByTagName('html')[0].style.fontSize = document.documentElement.clientWidth / 16 + 'px';
+			/*************end*******************/
+			mui.init()
+         
+			mui.plusReady(function() {
+
+				mui("ul").on("tap", "li", function() {
+					var title=this.getAttribute('title')
+//					alert(title)
+					mui.openWindow({
+						url: title,
+						id: title						
+					})
+				})
+			})
+            
+		
+			mui('.zhuti').scroll({
+	deceleration: 0.0005 //flick 减速系数，系数越大，滚动速度越慢，滚动距离越小，默认值0.0006
+});
+		</script>
+	</body>
+
+</html>

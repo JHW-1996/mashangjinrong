@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+	</head>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.mui-bar{
+			background-color: #5b8dfe;
+		}
+		.mui-title{
+			color: white;
+		}
+		.top{
+			widows: 100%;
+			margin-top: 40px;
+		}
+		.top ul li{
+			width: 100%;	
+		}
+		.top ul li img{
+			width: 100%;
+		}
+		.mui-media-body {
+			margin-top: 18px;
+		}
+		.mui-pull-left{
+			margin-top: 10px;
+			width: 40px;	
+		}
+	    
+	</style>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		    <h1 class="mui-title">个人中心</h1>
+		</header>
+		<div class="top">
+			<ul>
+				<li title="me-notice.html"><img src="img/images/me-bag_02.png" /></li>
+			</ul>
+		</div>
+		<ul class="mui-table-view">
+		    <li class="mui-table-view-cell mui-media" title="me-a.html">
+		        <a href="javascript:;">
+		            <img class="mui-media-object mui-pull-left" src="img/images/mui-me_03.png">
+		            <div class="mui-media-body">
+		                常见问题		                
+		            </div>
+		        </a>
+		    </li>
+		    <li class="mui-table-view-cell mui-media" title="me-b.html">
+		        <a href="javascript:;">
+		            <img class="mui-media-object mui-pull-left" src="img/images/mui-me_06.png">
+		            <div class="mui-media-body">
+		                个人所得税计算器
+		            </div>
+		        </a>
+		    </li>
+		    <li class="mui-table-view-cell mui-media" title="me-c.html">
+		        <a href="javascript:;">
+		            <img class="mui-media-object mui-pull-left" src="img/images/mui-me_08.png">
+		            <div class="mui-media-body">
+		                二手房计算器    
+		            </div>
+		        </a>
+		    </li>
+		     <li class="mui-table-view-cell mui-media" title="me-d.html">
+		        <a href="javascript:;">
+		            <img class="mui-media-object mui-pull-left" src="img/images/mui-me_10.png">
+		            <div class="mui-media-body">
+		                社保计算器		                
+		            </div>
+		        </a>
+		    </li>
+		     <li class="mui-table-view-cell mui-media" title="me-e.html">
+		        <a href="javascript:;">
+		            <img class="mui-media-object mui-pull-left" src="img/images/mui-me_12.png">
+		            <div class="mui-media-body">
+		                联系我们		                
+		            </div>
+		        </a>
+		    </li>
+		    
+		</ul>
+		
+	</body>
+
+</html>
+<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init();
+			mui.plusReady(function() {
+
+				mui("ul").on("tap", "li", function() {
+					var title=this.getAttribute('title')
+					mui.openWindow({
+						url: title,
+						id: title
+					})
+				})
+			})
+		</script>
